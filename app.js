@@ -7,8 +7,11 @@
 
 // 2. calculateCube
 function calculateCube(num) {
-    // YOUR CODE HERE
+    let volume=(num**3);
+    //let volume=Math.pow(num,3); will also work
+    return volume;
 }
+console.log(calculateCube(5));
 
 // 3. isAVowel
 function isAVowel(letter) {
@@ -57,15 +60,15 @@ function sumPositive(arr) {
     // YOUR CODE HERE
 }
 
-module.exports = {
-    calculateCube,
-    isAVowel,
-    getTwoLengths,
-    sumArray,
-    checkPrime,
-    printPrimes,
-    printLongestWord,
-    eulerFibo,
-    findNeedle,
-    sumPositive
-};
+// module.exports = {
+//     calculateCube,
+//     isAVowel,
+//     getTwoLengths,
+//     sumArray,
+//     checkPrime,
+//     printPrimes,
+//     printLongestWord,
+//     eulerFibo,
+//     findNeedle,
+//     sumPositive
+// };
