@@ -11,12 +11,25 @@ function calculateCube(num) {
     //let volume=Math.pow(num,3); will also work
     return volume;
 }
-console.log(calculateCube(5));
+//console.log(calculateCube(5));
 
 // 3. isAVowel
 function isAVowel(letter) {
-    // YOUR CODE HERE
+    //Create an array of vowels
+   let vowels=["a", "A", "e", "E", "i", "I", "o", "O", "u", "U"];
+   //let vowels=["a", "e", "i", "o", "u"];
+   //create loop to cycle through the vowels in the array
+   for (let i = 0; i < vowels.length; i++) {
+    //If letter matches any of the indexes = true. If not = false
+        if (letter == vowels[i]) {
+        //if (letter == vowels.indexOf[i]) {
+        console.log("true");
+    } else {
+        console.log("false");
+    }
+   }
 }
+isAVowel("A")
 
 // 4. getTwoLengths
 function getTwoLengths(word1, word2) {
