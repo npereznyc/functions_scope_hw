@@ -31,18 +31,18 @@ function isAVowel(letter) {
 return "false";
 }
 
-console.log(isAVowel("O"))
+//console.log(isAVowel("O"))
 
 
 // 4. getTwoLengths
-// function getTwoLengths(word1, word2) {
-//     let length1=word1.length;
-//     let length2=word2.length;
-//     return length1;
-//     return length2;
-
-// }
-// console.log(getTwoLengths("hat", "animal"))
+function getTwoLengths(word1, word2) {
+    let length1=word1.length;
+    let length2=word2.length;
+    let wordString= length1 + "," + length2
+    let array=wordString.split(",")
+    return array;
+}
+console.log(getTwoLengths("house", "pet"))
 
 // 5. sumArray
 function sumArray(arr) {
