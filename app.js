@@ -58,48 +58,75 @@ function sumArray(arr) {
     // }
     return sum;
 }
-console.log(sumArray([1, 2, 3, 4, 5, 6]));
+//console.log(sumArray([1, 2, 3, 4, 5, 6]));
 
 // 6.1 checkPrime
 function checkPrime(num) {
-    if (num<=2) {
-        return "false";
+if (num===1) {
+    return "false";
+} else if (num===2) {
+    return "true";
+}else {
+    for(let i = 2; i<num; i++) {
+        if (num% i ===0){
+            return "false"
+        }
     }
-    let root = Math.sqrt(num);
-    for (let i = 2; i <= root; i++) {
-        if (num % i === 0) {
-        return "false";
-    } else {
-        return "true";
+    return "true"
     }
 }
-}
-//console.log(checkPrime(22));
-//This works for every number except 3. Why??
+console.log(checkPrime(55));
+
 
 // 6.2 printPrimes
 
 function printPrimes(num) {
-   for (let i = 0; i <= num; i++) {
-    let flag = 0;
-        for(let j=2; j<+i; j++) {
-            if (i %j == 0){
-                flag=1;
-                break;
-            }
+    let notPrime= false;
+    for (let i = 0; i <= num; i++) {
+        if (checkPrime="true") {
+            notPrime=true;
+    }
+        if(checkPrime="false") {
+            notPrime=false;
+    }
+        if(notPrime===false){
+            return num;
         }
-    if (i > 1 && flag ==0) {
-        return i;
+    // for(let i=2; i<=num; i++){
+    //     if(num%i===0){
+    //         notPrime= true;
+    //     }
+    //     if(notPrime=false) {
+    //         return num;
+    //     }
     }
+    //return num
     }
-   }
+    // let arr = [0];
+    // for (let i = 0; i < num; i+=2) {
+    //     if(checkPrime(i)) {
+    //         arr.push(i);
+    //     }
+    // }
+ 
 
-//console.log(printPrimes(97));
+console.log(printPrimes(97));
 
 // 7. printLongestWord
 function printLongestWord(arr) {
-    // YOUR CODE HERE
+    let longestString=arr[0].length;
+    let longestWord= arr[0];
+    for (let i = 1; i < arr.length; i++) {
+        let max=arr[i].length;
+        if(max>longestString){
+            longestWord=arr[i];
+            longestString=max;
+        }
+    }
+    return longestWord;
 }
+//console.log(printLongestWord(["BoJack", "Princess", "Diane", "a", "Max", "Peanutbutter", "big", "blob"]));
+
 
 // BONUS!
 
