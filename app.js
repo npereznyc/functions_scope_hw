@@ -75,7 +75,7 @@ if (num===1) {
     return "true"
     }
 }
-console.log(checkPrime(55));
+//console.log(checkPrime(55));
 
 
 // 6.2 printPrimes
@@ -110,7 +110,7 @@ function printPrimes(num) {
     // }
  
 
-console.log(printPrimes(97));
+//console.log(printPrimes(97));
 
 // 7. printLongestWord
 function printLongestWord(arr) {
@@ -125,7 +125,7 @@ function printLongestWord(arr) {
     }
     return longestWord;
 }
-//console.log(printLongestWord(["BoJack", "Princess", "Diane", "a", "Max", "Peanutbutter", "big", "blob"]));
+console.log(printLongestWord(["BoJack", "Princess", "Diane", "a", "Max", "Peanutbutter", "big", "blob"]));
 
 
 // BONUS!
