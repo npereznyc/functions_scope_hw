@@ -11,30 +11,38 @@ function calculateCube(num) {
     //let volume=Math.pow(num,3); will also work
     return volume;
 }
-//console.log(calculateCube(5));
+// console.log(calculateCube(5));
 
-// 3. isAVowel
+//3. isAVowel
 function isAVowel(letter) {
     //Create an array of vowels
-   let vowels=["a", "A", "e", "E", "i", "I", "o", "O", "u", "U"];
-   //let vowels=["a", "e", "i", "o", "u"];
+   let vowels=["a", "e", "i", "o", "u"];
    //create loop to cycle through the vowels in the array
-   for (let i = 0; i < vowels.length; i++) {
+    for (let i = 0; i < vowels.length; i++) {
+    //Convert input to lowercase for consistency
+    letter=letter.toLowerCase();
     //If letter matches any of the indexes = true. If not = false
-        if (letter == vowels[i]) {
-        //if (letter == vowels.indexOf[i]) {
-        console.log("true");
+    if (letter==vowels[i]) {
+        return "true";
     } else {
-        console.log("false");
     }
-   }
 }
-isAVowel("A")
+//this return statement goes outside of the loop so that the loop can continue to execute until it's exhausted all of the vowel options.
+return "false";
+}
+
+console.log(isAVowel("O"))
+
 
 // 4. getTwoLengths
-function getTwoLengths(word1, word2) {
-    // YOUR CODE HERE
-}
+// function getTwoLengths(word1, word2) {
+//     let length1=word1.length;
+//     let length2=word2.length;
+//     return length1;
+//     return length2;
+
+// }
+// console.log(getTwoLengths("hat", "animal"))
 
 // 5. sumArray
 function sumArray(arr) {
