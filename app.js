@@ -49,23 +49,52 @@ function sumArray(arr) {
 
     let sum = 0;
     //looping over the values of the array
-    for (const val of arr) {
-        //add zero to the first value in the array, and then add that to the next value, and so forth.
-        sum += val;
+    for(i=0; i<arr.length;i++) {
+        sum+=arr[i];
     }
+    // for (const val of arr) {
+    //     //add zero to the first value in the array, and then add that to the next value, and so forth.
+    //     sum += val;
+    // }
     return sum;
 }
 console.log(sumArray([1, 2, 3, 4, 5, 6]));
 
 // 6.1 checkPrime
 function checkPrime(num) {
-    // YOUR CODE HERE
+    if (num<=2) {
+        return "false";
+    }
+    let root = Math.sqrt(num);
+    for (let i = 2; i <= root; i++) {
+        if (num % i === 0) {
+        return "false";
+    } else {
+        return "true";
+    }
 }
+}
+//console.log(checkPrime(22));
+//This works for every number except 3. Why??
 
 // 6.2 printPrimes
+
 function printPrimes(num) {
-    // YOUR CODE HERE
-}
+   for (let i = 0; i <= num; i++) {
+    let flag = 0;
+        for(let j=2; j<+i; j++) {
+            if (i %j == 0){
+                flag=1;
+                break;
+            }
+        }
+    if (i > 1 && flag ==0) {
+        return i;
+    }
+    }
+   }
+
+//console.log(printPrimes(97));
 
 // 7. printLongestWord
 function printLongestWord(arr) {
