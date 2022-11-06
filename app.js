@@ -42,12 +42,20 @@ function getTwoLengths(word1, word2) {
     let array=wordString.split(",")
     return array;
 }
-console.log(getTwoLengths("house", "pet"))
+//console.log(getTwoLengths("house", "pet"))
 
 // 5. sumArray
 function sumArray(arr) {
-    // YOUR CODE HERE
+
+    let sum = 0;
+    //looping over the values of the array
+    for (const val of arr) {
+        //add zero to the first value in the array, and then add that to the next value, and so forth.
+        sum += val;
+    }
+    return sum;
 }
+console.log(sumArray([1, 2, 3, 4, 5, 6]));
 
 // 6.1 checkPrime
 function checkPrime(num) {
